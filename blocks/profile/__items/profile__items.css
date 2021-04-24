@@ -1,0 +1,8 @@
+.profile__items {
+    display: flex;
+    margin-bottom: 16px;
+}
+@media screen and (max-width: 879px) {
+.profile__items {
+    margin-bottom: 14px;
+}}    

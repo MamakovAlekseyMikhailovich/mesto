@@ -1,259 +1,45 @@
 @import url(../vendor/normalize.css);
 @import url(../fonts/inter.css);
-.page {
-    font-family: 'Inter', Arial, sans-serif;
-    background-color: #000000;
-    background-size: 100%;
-    -moz-background-size: 100%;
-    -webkit-background-size: 100%;
-    -o-background-size: 100%;
-    max-width: 100%;
-    min-width: 320px;
-    margin: 0 auto;
-    height: 100%;
-    overflow-y: scroll;
-}
+@import url(../blocks/page/page.css);
 
 /*HEADER*/
-.header {
-    max-width: 880px;
-    margin: 0 auto;
-    padding-top: 45px;
-    padding-bottom: 41px;
-    display: flex;
-    border-bottom: 1px solid rgb(84, 84, 84, 0.7);
-}
-@media screen and (max-width: 879px) {
-.header {
-    padding-top: 28px;
-    padding-bottom: 32px;
-    }}
-.header__logo {
-    width: 142px;
-    height: 33px;
-}
-@media screen and (max-width: 879px) {
-    .header__logo {
-    width: 104px;
-    height: 25px;
-    margin-left: 27px;
-    }}
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
 /*HEADER*/
 
-.profile {
-    max-width: 880px;
-    margin: 40px auto 50px auto;
-    display: grid;
-    grid-template-columns: 120px 1fr 150px;
-    gap: 30px;
-    align-items: center;
-}
-
-@media screen and (max-width: 879px) {
-.profile {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-    gap: 26px;
-    padding-top: 42px;
-}}
-
-.profile__avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 100px;
-    margin-right: 30px;
-}
-.profile__items {
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 16px;
-}
-.profile__title {
-    color: #FFFFFF;
-    font-weight: 500;
-    font-size: 42px;
-    line-height: 48px;
-    max-width: 294px;
-    min-width: 189px;
-    max-height: 39px;
-    min-height: 26px;
-    margin: 0;
-}
-.profile__button {
-    background-color: #000;
-}
-/*PROFILE
-.profile {
-    max-width: 880px;
-    margin: 40px auto 50px auto;
-    display: flex;
-}
-@media screen and (max-width: 879px) {
-.profile {
-    flex-direction: column;
-    margin: 0;
-    min-width: 189px;
-}}
-.profile__avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 100px;
-    margin-right: 30px;
-}
-@media screen and (max-width: 879px) {
-.profile__avatar {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 42px;
-    margin-bottom: 26px;
-}}
-
-.profile__title {
-    color: #FFFFFF;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 42px;
-    line-height: 48px;
-    max-width: 294px;
-    min-width: 189px;
-    max-height: 39px;
-    min-height: 26px;
-    margin-top: 22px;
-    margin-bottom: 0;
-}
-@media screen and (max-width: 879px) {
-.profile__title {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 27px;
-    line-height: 33px;
-    margin: 0;  
-}}
-
-.profile__subtitle {
-    color: #FFFFFF;
-    width: 336px;
-    height: 18px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    margin-top: 16px;
-    margin-bottom: 0;
-}
-@media screen and (max-width: 879px) {
-.profile__subtitle {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;   
-}} 
-
-.profile__items {
-    display: flex;
-}
-@media screen and (max-width: 879px) {
-.profile__items {
- margin: 0 auto;
- text-align: center;
-}}
-
-.profile__button-edit {
-    align-self: flex-end;
-    margin-left: 18px;
-}
-@media screen and (max-width: 879px) {
-.profile__button-edit {
-    margin-left: 10px;
-    width: 18px;
-    height: 18px;
-}}
-.profile__button-add {
-
-}
-PROFILE*/
+/*PROFILE*/
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__items/profile__items.css);
+@import url(../blocks/profile/__title/profile__title.css);
+@import url(../blocks/profile/__subtitle/profile__subtitle.css);
+@import url(../blocks/profile/__button/profile__button.css);
+@import url(../blocks/profile/__button/_edit/profile__button_edit.css);
+@import url(../blocks/profile/__button/_add/profile__button_add.css);
+/*PROFILE*/
 
 /*ELEMENTS*/
-.element__list {
-    max-width: 880px;
-    display: grid;
-    grid-template-columns: repeat(3, 282px);
-    grid-template-rows: 361px;
-    gap: 20px 17px;
-    margin: 0 auto;
-    padding: 0;
-    list-style-type: none;
-    justify-content: center;
-}
-@media screen and (max-width: 879px) {
-    .element__list {
-        grid-template-columns: repeat(2, 282px);
-    } }
-@media screen and (max-width: 584px) {
-    .element__list {
-        grid-template-columns: 282px;
-        } }   
-.element__item {
-    width: 282px;
-    height: 362px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    list-style-type: none;
-}
-.element__like {
-    background-color: #FFFFFF;
-    margin-right: 15px;
-}
-.element__title {
-    background-color: #FFFFFF;
-    margin: 0 21px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-} 
-.element__info {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 25px;    
-}
+@import url(../blocks/element/__list/element__list.css);
+@import url(../blocks/element/__item/element__item.css);
+@import url(../blocks/element/__like/element__like.css);
+@import url(../blocks/element/__title/element__title.css);
+@import url(../blocks/element/__info/element__info.css);
+@import url(../blocks/element/__photo/element__photo.css);
 /*ELEMENTS*/
 
-.footer {
-    max-width: 882px;
-    margin: 0 auto;
-    padding-top: 67px;
-    padding-bottom: 60px;
-}
-@media screen and (max-width: 879px) {
-    .footer {
-    padding-top: 48px;
-    padding-bottom: 36px;
-    } }
+/*FOOTER*/
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
+/*FOOTER*/
 
-.footer__copyright {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    color: #545454;
-    margin: 0;
-}
-@media screen and (max-width: 879px) {
-    .footer__copyright {
-        margin-left: 19px;
-    } }
-@media screen and (max-width: 584px) {
-    .footer__copyright {
-        margin-left: 19px;
-    } }
+/*POPUP*/
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__form/popup__form.css);
+@import url(../blocks/popup/__button/_close/popup__button_close.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__input/_name/popup__input_name.css);
+@import url(../blocks/popup/__input/_about/popup__input_about.css);
+@import url(../blocks/popup/__button/_save/popup__button_save.css);
+/*POPUP*/

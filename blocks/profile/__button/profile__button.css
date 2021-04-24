@@ -1,0 +1,10 @@
+.profile__button {
+    background-color: #000000;
+}
+.profile__button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.profile__button:focus {
+    outline: none;
+}
