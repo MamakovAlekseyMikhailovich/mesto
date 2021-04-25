@@ -1,4 +1,4 @@
-.element__like {
+.elements__like {
     background-image: url(../images/button__like.svg);
     background-repeat: no-repeat;
     background-color: #FFFFFF;
@@ -8,14 +8,14 @@
     border: 0;
     padding: 0;
 }
-.element__like:hover {
+.elements__like:hover {
     opacity: 0.6;
     cursor: pointer;
 }
-.element__like:active {
+.elements__like:active {
     background-image: url(../images/button__like-active.svg);
     cursor: pointer;
 }
-.element__like:focus {
+.elements__like:focus {
     outline: none;
 }

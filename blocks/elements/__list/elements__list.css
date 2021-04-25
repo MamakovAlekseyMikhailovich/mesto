@@ -1,4 +1,4 @@
-.element__list {
+.elements__list {
     max-width: 880px;
     display: grid;
     grid-template-columns: repeat(3, 282px);
@@ -10,10 +10,10 @@
     justify-content: center;
 }
 @media screen and (max-width: 879px) {
-.element__list {
+.elements__list {
     grid-template-columns: repeat(2, 282px);
 }}
 @media screen and (max-width: 584px) {
-.element__list {
+.elements__list {
         grid-template-columns: 282px;
 }}
