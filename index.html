@@ -19,11 +19,11 @@
                 <div class="profile__info">
                     <div class="profile__items">
                         <h1 class="profile__title">Жак-Ив Кусто</h1>
-                        <button class="profile__button profile__button_edit" type="button" aria-label="Редактирование"></button>
+                        <button class="profile__edit-button" type="button" aria-label="Редактирование"></button>
                     </div>
                 <p class="profile__subtitle">Исследователь океана</p>
                 </div>
-                <button class="profile__button profile__button_add" type="button" aria-label="Добавление"></button>
+                <button class="profile__add-button" type="button" aria-label="Добавление"></button>
             </section>
             <section class="elements">
                 <ul class="elements__list">
@@ -80,11 +80,11 @@
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form" name="profile-form">
-                <input class="popup__input popup__input_name" type="text" value="Жак-Ив Кусто" placeholder="Имя" name="profile-name" maxlength="50" required>
-                <input class="popup__input popup__input_about" type="text" value="Исследователь океана" placeholder="О себе" name="profile-about" maxlength="200" required>
-                <button class="popup__button popup__button_save" type="submit" aria-label="Сохранить">Сохранить</button>
+                <input class="popup__input popup__input_type_name" type="text" value="Жак-Ив Кусто" placeholder="Имя" name="profile-name" maxlength="30" required>
+                <input class="popup__input popup__input_type_about" type="text" value="Исследователь океана" placeholder="О себе" name="profile-about" maxlength="40" required>
+                <button class="popup__save" type="submit" aria-label="Сохранить">Сохранить</button>
             </form>
-            <button class="popup__button popup__button_close" type="button" aria-label="Закрыть попап"></button>
+            <button class="popup__close" type="button" aria-label="Закрыть попап"></button>
         </div>
     </div>
     <script defer src="./scripts/index.js"></script>

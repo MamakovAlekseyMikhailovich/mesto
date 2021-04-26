@@ -8,10 +8,11 @@
     white-space: nowrap;
     overflow: hidden;
     max-width: 336px;
-    max-height: 18px;
-}    
-@media (max-width: 879px) {
-.profile__subtitle {
-    font-size: 14px;
-    line-height: 17px;
-}}
+}
+
+@media screen and (max-width: 879px) {
+    .profile__subtitle {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

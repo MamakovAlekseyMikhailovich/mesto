@@ -9,11 +9,15 @@
     list-style-type: none;
     justify-content: center;
 }
+
 @media screen and (max-width: 879px) {
-.elements__list {
-    grid-template-columns: repeat(2, 282px);
-}}
+    .elements__list {
+        grid-template-columns: repeat(2, 282px);
+    }
+}
+
 @media screen and (max-width: 584px) {
-.elements__list {
+    .elements__list {
         grid-template-columns: 282px;
-}}
+    }
+}

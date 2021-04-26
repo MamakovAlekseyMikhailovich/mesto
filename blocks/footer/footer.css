@@ -3,9 +3,12 @@
     margin: 0 auto;
     padding-top: 67px;
     padding-bottom: 60px;
+    flex-shrink: 1;
 }
+
 @media screen and (max-width: 879px) {
-.footer {
-    padding-top: 48px;
-    padding-bottom: 36px;
-}}
+    .footer {
+        padding-top: 48px;
+        padding-bottom: 36px;
+    }
+}

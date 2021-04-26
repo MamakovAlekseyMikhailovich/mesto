@@ -1,4 +1,4 @@
-.popup__button_save {
+.popup__save {
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -16,13 +16,16 @@
     cursor: pointer;
     transition: all 1s ease-out;
 }
-.popup__button_save:hover {
+
+.popup__save:hover {
     opacity: 0.8;
 }
-@media (max-width: 879px) {
-.popup__button_save {
-    font-size: 14px;
-    line-height: 17px;
-    margin-top: 45px;
-    padding-bottom: 14px;
-}}
+
+@media screen and (max-width: 879px) {
+    .popup__save {
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 45px;
+        padding-bottom: 14px;
+    }
+}

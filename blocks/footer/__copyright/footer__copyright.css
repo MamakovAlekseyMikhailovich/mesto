@@ -4,7 +4,11 @@
     color: #545454;
     margin: 0;
 }
+
 @media screen and (max-width: 879px) {
-.footer__copyright {
-    margin-left: 19px;
-}}
+    .footer__copyright {
+        margin-left: 19px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

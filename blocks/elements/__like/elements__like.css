@@ -1,21 +1,24 @@
 .elements__like {
-    background-image: url(../images/button__like.svg);
+    background-image: url(../../../images/button__like.svg);
     background-repeat: no-repeat;
-    background-color: #FFFFFF;
+    background-color: #11ffee00;
     align-self: center;
     width: 22px;
     height: 19px;
     border: 0;
     padding: 0;
 }
+
 .elements__like:hover {
-    opacity: 0.6;
+    opacity: 0.5;
     cursor: pointer;
 }
+
 .elements__like:active {
-    background-image: url(../images/button__like-active.svg);
+    background-image: url(../../../images/button__like-active.svg);
     cursor: pointer;
 }
+
 .elements__like:focus {
     outline: none;
 }
