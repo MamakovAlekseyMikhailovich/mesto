@@ -6,8 +6,10 @@
     bottom: 0;
     right: 0;
     background-color: rgba(0,0,0,.5);
-    display: none;
-    z-index: 2;
+    display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity .3s linear;
 }

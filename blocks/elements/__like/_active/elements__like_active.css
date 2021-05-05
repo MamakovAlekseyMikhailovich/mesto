@@ -1,5 +1,5 @@
-.elements__like {
-    background-image: url(../../../images/button__like.svg);
+.elements__like_active {
+    background-image: url(../../../../images/button__like-active.svg);
     background-repeat: no-repeat;
     background-color: #11ffee00;
     align-self: center;
@@ -9,11 +9,11 @@
     padding: 0;
 }
 
-.elements__like:hover {
+.elements__like_active:hover {
     opacity: 0.5;
     cursor: pointer;
 }
 
-.elements__like:focus {
+.elements__like_active:focus {
     outline: none;
 }

@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="./pages/index.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Aleksey Mamakov">
+    <meta name="author" content="Алексей Мамаков">
     <title>Mesto</title>
 </head>
 <body>
@@ -25,70 +25,62 @@
                 </div>
                 <button class="profile__add-button" type="button" aria-label="Добавление"></button>
             </section>
+            
             <section class="elements">
                 <ul class="elements__list">
-                    <li class="elements__item">
-                        <img class="elements__photo" src="./images/photo1.jpg" alt="Изображение">
-                        <div class="elements__info">
-                            <h2 class="elements__title">Москва</h2>
-                            <button class="elements__like" type="button" aria-label="Кнопка лайк"></button>
-                        </div>
-                    </li>
-                    <li class="elements__item">
-                        <img class="elements__photo" src="./images/photo2.jpg" alt="Изображение">
-                        <div class="elements__info">
-                            <h2 class="elements__title">Санкт-Петербург</h2>
-                            <button class="elements__like" type="button" aria-label="Кнопка лайк"></button>
-                        </div>
-                    </li>
-                    <li class="elements__item">
-                        <img class="elements__photo" src="./images/photo3.jpg" alt="Изображение">
-                        <div class="elements__info">
-                            <h2 class="elements__title">Домбай</h2>
-                            <button class="elements__like" type="button" aria-label="Кнопка лайк"></button>
-                        </div>
-                    </li>
-                    <li class="elements__item">
-                        <img class="elements__photo" src="./images/photo4.jpg" alt="Изображение">
-                        <div class="elements__info">
-                            <h2 class="elements__title">Гора Эльбрус</h2>
-                            <button class="elements__like" type="button" aria-label="Кнопка лайк"></button>
-                        </div>
-                    </li>
-                    <li class="elements__item">
-                        <img class="elements__photo" src="./images/photo5.jpg" alt="Изображение">
-                        <div class="elements__info">
-                            <h2 class="elements__title">Домбай</h2>
-                            <button class="elements__like" type="button" aria-label="Кнопка лайк"></button>
-                        </div>
-                    </li>
-                    <li class="elements__item">
-                        <img class="elements__photo" src="./images/photo6.jpg" alt="Изображение">
-                        <div class="elements__info">
-                            <h2 class="elements__title">Карачаево-Черкесия</h2>
-                            <button class="elements__like" type="button" aria-label="Кнопка лайк"></button>
-                        </div>
-                    </li>
+                    
                 </ul>
-            </section>
+            </section>        
         </main>
         <footer class="footer">
             <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
         </footer>
     </div>
-    <div class="popup">
+    
+    <div class="popup" id="popupEdit">
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="popup__form" name="profile-form">
+            <form class="popup__form" name="editProfile" id="popupEditForm">
                 <input class="popup__input popup__input_type_name" type="text" value="Жак-Ив Кусто" placeholder="Имя" name="profile-name" maxlength="30" required>
                 <input class="popup__input popup__input_type_about" type="text" value="Исследователь океана" placeholder="О себе" name="profile-about" maxlength="40" required>
-                <button class="popup__save" type="submit" aria-label="Сохранить">Сохранить</button>
+                <button class="popup__save" type="submit" aria-label="Сохранить" id="popupEditSave">Сохранить</button>
             </form>
-            <button class="popup__close" type="button" aria-label="Закрыть попап"></button>
+            <button class="popup__close" type="button" aria-label="Закрыть попап" id="closeEditButton"></button>
         </div>
     </div>
+
+    <div class="popup" id="popupAdd">
+        <div class="popup__container">
+            <h2 class="popup__title">Новое место</h2>
+            <form class="popup__form" name="addCard" id="popupAddForm">
+                <input class="popup__input popup__input_type_place" type="text" placeholder="Название" name="place-name">
+                <input class="popup__input popup__input_type_link" type="text" placeholder="Ссылка на картинку" name="place-link">
+                <button class="popup__save" type="submit" aria-label="Сохранить" id="popupAddSave">Сохранить</button>
+            </form>
+            <button class="popup__close" type="button" aria-label="Закрыть попап" id="closeAddButton"></button>
+        </div>
+    </div>
+
+    <div class="popup" id="popupImg">
+        <div class="popup__container-img">
+            <figure class="popup__figure">
+                <button class="popup__close" type="button" aria-label="Закрыть попап" id="closeImgButton"></button>
+                <img class="popup__image">
+                <figcaption class="popup__caption"></figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <template id="elements-template">
+        <li class="elements__item">
+            <button type="button" class="elements__delete" aria-label="Кнопка удаления"></button>
+            <img class="elements__photo" alt="Изображение" name="place-image">
+            <div class="elements__info">
+                <h2 class="elements__title"></h2>
+                <button type="button" class="elements__like" aria-label="Кнопка лайк"></button>
+            </div>
+        </li>
+    </template>
     <script defer src="./scripts/index.js"></script>
 </body>
 </html>
-
-    
