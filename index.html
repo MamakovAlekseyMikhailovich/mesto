@@ -15,7 +15,7 @@
         </header>
         <main class="content">
             <section class="profile">
-                <img class="profile__avatar" src="./images/profile__avatar.svg" alt="Изображение Жак-Ив Кусто">
+                <img class="profile__avatar" src="./images/profile__avatar.svg" alt="Аватар пользователя">
                 <div class="profile__info">
                     <div class="profile__items">
                         <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -41,8 +41,8 @@
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form" name="editProfile" id="popupEditForm">
-                <input class="popup__input popup__input_type_name" type="text" value="Жак-Ив Кусто" placeholder="Имя" name="profile-name" maxlength="30" required>
-                <input class="popup__input popup__input_type_about" type="text" value="Исследователь океана" placeholder="О себе" name="profile-about" maxlength="40" required>
+                <input class="popup__input popup__input_type_name" type="text" value="" placeholder="Имя" name="profile-name" maxlength="30" required>
+                <input class="popup__input popup__input_type_about" type="text" value="" placeholder="О себе" name="profile-about" maxlength="40" required>
                 <button class="popup__save" type="submit" aria-label="Сохранить" id="popupEditSave">Сохранить</button>
             </form>
             <button class="popup__close" type="button" aria-label="Закрыть попап" id="closeEditButton"></button>
@@ -53,8 +53,8 @@
         <div class="popup__container">
             <h2 class="popup__title">Новое место</h2>
             <form class="popup__form" name="addCard" id="popupAddForm">
-                <input class="popup__input popup__input_type_place" type="text" placeholder="Название" name="place-name">
-                <input class="popup__input popup__input_type_link" type="text" placeholder="Ссылка на картинку" name="place-link">
+                <input class="popup__input popup__input_type_place" type="text" value="" placeholder="Название" name="place-name">
+                <input class="popup__input popup__input_type_link" type="url" value="" placeholder="Ссылка на картинку" name="place-link">
                 <button class="popup__save" type="submit" aria-label="Сохранить" id="popupAddSave">Сохранить</button>
             </form>
             <button class="popup__close" type="button" aria-label="Закрыть попап" id="closeAddButton"></button>
@@ -62,13 +62,11 @@
     </div>
 
     <div class="popup" id="popupImg">
-        <div class="popup__container-img">
-            <figure class="popup__figure">
-                <button class="popup__close" type="button" aria-label="Закрыть попап" id="closeImgButton"></button>
-                <img class="popup__image">
-                <figcaption class="popup__caption"></figcaption>
-            </figure>
-        </div>
+        <figure class="popup__figure">
+            <button class="popup__close" type="button" aria-label="Закрыть попап" id="closeImgButton"></button>
+            <img class="popup__image">
+            <figcaption class="popup__caption"></figcaption>
+        </figure>
     </div>
 
     <template id="elements-template">
@@ -81,6 +79,7 @@
             </div>
         </li>
     </template>
+    <script defer src="./scripts/initial-cards.js"></script>
     <script defer src="./scripts/index.js"></script>
 </body>
 </html>
