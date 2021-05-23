@@ -14,8 +14,23 @@
     width: 100%;
 }
 
+.popup__input:focus {
+    outline-color: rgb(103, 148, 233);
+    outline-width: 3px;
+}
+  
+.popup__input:last-of-type {
+    margin-bottom: 0;
+}
+
+.popup__input + .popup__error_visible {
+    margin-top: 5px;
+}
+ 
 @media screen and (max-width: 879px) {
     .popup__input {
         margin-top: 17px;
     }
 }
+
+  

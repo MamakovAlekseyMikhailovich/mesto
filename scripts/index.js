@@ -20,14 +20,43 @@ const elementsList = document.querySelector(".elements__list");
 const elementsTemplate = document.querySelector("#elements-template").content;
 const imagePopup = document.querySelector(".popup__image");
 const captionPopup = document.querySelector(".popup__caption");
-  
+const config = { 
+    formSelector: '.popup__form',
+    inputSelector: '.popup__input',
+    submitButtonSelector: '.popup__save',
+    inactiveButtonClass: 'popup__save_disabled',
+    inputErrorClass: 'popup__input_type_error',
+    errorClass: 'popup__error_visible'
+}
+
 //Общие функции для popup
 function openPopup(popup) {
+    popup.addEventListener('click', closePopupOverlay);
+    document.addEventListener('keydown', closePopupEscape);
     popup.classList.add("popup_opened");
 }
 
 function closePopup(popup) {
+    popup.removeEventListener('click', closePopupOverlay);
+    document.removeEventListener('keydown', closePopupEscape);
     popup.classList.remove("popup_opened");
+}
+
+function togglePopup() {
+    const openedPopup = document.querySelector(".popup_opened");
+    closePopup(openedPopup);
+}
+
+function closePopupOverlay(evt) {
+    if (evt.target === evt.currentTarget) {
+    togglePopup();
+    }
+}
+
+function closePopupEscape(evt) {
+    if (evt.key === 'Escape') {
+    togglePopup();
+    }
 }
 
 //Редактирование профиля -->
@@ -91,16 +120,16 @@ function createCard(element) {
     cardsElement.querySelector(".elements__photo").alt = element.name;
     cardsElement.querySelector(".elements__photo").addEventListener("click", function () { 
         openPopupImage(element.link, element.name); 
-  }); 
+    }); 
  
     const deleteCard = cardsElement.querySelector(".elements__delete"); 
     deleteCard.addEventListener("click", function (event) { 
         event.target.closest(".elements__item").remove(); 
-  }); 
+    }); 
  
     cardsElement.querySelector(".elements__like").addEventListener("click", function (event) { 
         event.target.classList.toggle("elements__like_active"); 
-  }); 
+    }); 
      
     return cardsElement; 
 }; 
@@ -113,3 +142,5 @@ closeAddButton.addEventListener("click", closePopupAdd);
 closeImgButton.addEventListener("click", closePopupImage);
 popupEditForm.addEventListener("submit", handleProfileFormSubmit);
 popupAddForm.addEventListener("submit", handleCardFormSubmit);
+
+enableValidation(config);
