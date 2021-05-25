@@ -36,6 +36,15 @@ function openPopup(popup) {
     popup.classList.add("popup_opened");
 }
 
+function clearInputOpenPopup (popup) {
+    openPopup(popup);
+    const form = popup.querySelector(config.formSelector);
+    const inputList = form.querySelectorAll(config.inputSelector);
+    inputList.forEach((input) => {
+        hideInputError (form, input, config);
+    });
+}
+
 function closePopup(popup) {
     popup.removeEventListener('click', closePopupOverlay);
     document.removeEventListener('keydown', closePopupEscape);
@@ -64,6 +73,7 @@ function openPopupEdit() {
     nameInput.value = profileName.textContent;
     aboutInput.value = profileAbout.textContent;
     openPopup(popupEdit);
+    clearInputOpenPopup (popupEdit);
 }
 
 function closePopupEdit() {
@@ -82,6 +92,8 @@ function handleProfileFormSubmit(event) {
 function openPopupAdd () {
     document.getElementById('popupAddSave').disabled = true;
     openPopup(popupAdd);
+    clearInputsAdd();
+    clearInputOpenPopup(popupAdd);
 }
 
 function closePopupAdd () {
@@ -94,6 +106,11 @@ function handleCardFormSubmit (event) {
     elementsList.prepend(newCard);
     closePopupAdd();
     popupAddForm.reset();
+}
+
+function clearInputsAdd()  {
+    placeInput.value = '';
+    linkInput.value = '';
 }
 
 //Открытие картинки -->
