@@ -40,12 +40,12 @@ const setEventListeners = (formElement, config) => {
 };
 
 const toggleButtonState = (inputList, buttonElement) => {
-    const { inactiveButtonClass } = config;
+    // const { inactiveButtonClass } = config;
     if (hasInvalidInput(inputList)) {
       buttonElement.disabled = true;
-      buttonElement.classList.add(inactiveButtonClass);
+      // buttonElement.classList.add(inactiveButtonClass);
     } else {
-      buttonElement.classList.remove(inactiveButtonClass);
+      // buttonElement.classList.remove(inactiveButtonClass);
       buttonElement.disabled = false;
     }
 };

@@ -24,7 +24,7 @@ const config = {
     formSelector: '.popup__form',
     inputSelector: '.popup__input',
     submitButtonSelector: '.popup__save',
-    inactiveButtonClass: 'popup__save_disabled',
+    // inactiveButtonClass: 'popup__save_disabled',
     inputErrorClass: 'popup__input_type_error',
     errorClass: 'popup__error_visible'
 }
@@ -42,20 +42,20 @@ function closePopup(popup) {
     popup.classList.remove("popup_opened");
 }
 
-function togglePopup() {
+function findOpenedPopup () {
     const openedPopup = document.querySelector(".popup_opened");
     closePopup(openedPopup);
 }
 
 function closePopupOverlay(evt) {
     if (evt.target === evt.currentTarget) {
-    togglePopup();
+    findOpenedPopup();
     }
 }
 
 function closePopupEscape(evt) {
     if (evt.key === 'Escape') {
-    togglePopup();
+    findOpenedPopup();
     }
 }
 
@@ -80,6 +80,7 @@ function handleProfileFormSubmit(event) {
 
 //Редактирование карточек -->
 function openPopupAdd () {
+    document.getElementById('popupAddSave').disabled = true;
     openPopup(popupAdd);
 }
 
@@ -114,11 +115,12 @@ initialCards.forEach(function (element) {
 })
 
 function createCard(element) {
-    const cardsElement = elementsTemplate.cloneNode(true); 
+    const cardsElement = elementsTemplate.cloneNode(true);
+    const elementsPhoto = cardsElement.querySelector(".elements__photo");
     cardsElement.querySelector(".elements__title").textContent = element.name; 
-    cardsElement.querySelector(".elements__photo").src = element.link;
-    cardsElement.querySelector(".elements__photo").alt = element.name;
-    cardsElement.querySelector(".elements__photo").addEventListener("click", function () { 
+    elementsPhoto.src = element.link;
+    elementsPhoto.alt = element.name;
+    elementsPhoto.addEventListener("click", function () { 
         openPopupImage(element.link, element.name); 
     }); 
  
