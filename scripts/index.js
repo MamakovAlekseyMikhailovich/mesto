@@ -58,18 +58,19 @@ function openPopupEdit() {
 }
 
 function closePopupEscape(evt) {
-  const popupActive = document.querySelector(".popup_opened");
+  // const popupActive = document.querySelector(".popup_opened");
   if (evt.key === "Escape") {
+    const popupActive = document.querySelector(".popup_opened");
     closePopup(popupActive);
   }
 }
 
 function closePopupOverlay(evt) {
-  const popupActive = document.querySelector(".popup_opened");
   if (
     evt.target.classList.contains("popup") ||
     evt.target.classList.contains("popup__close")
   ) {
+    const popupActive = document.querySelector(".popup_opened");
     closePopup(popupActive);
   }
 }

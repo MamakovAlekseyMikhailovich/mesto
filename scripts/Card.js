@@ -62,13 +62,14 @@ class Card {
     imagePopup.alt = caption;
     captionPopup.textContent = caption;
   }
+
   _toggleLike (evt) {
     evt.target.classList.toggle("elements__like_active")
   }
   _deleteCard (evt) {
     evt.target.closest(".elements__item").remove()
   }
-  
+
   _setEventListeners() {
     this._element
       .querySelector(".elements__photo")
@@ -78,14 +79,13 @@ class Card {
 
     this._element
       .querySelector(".elements__delete")
-      .addEventListener("click", () => {this._deleteCard});
+      .addEventListener("click", (evt) => {this._deleteCard(evt)});
       // (evt) => {evt.target.closest(".elements__item").remove();});
 
     this._element
       .querySelector(".elements__like")
-      .addEventListener("click", () => {this._toggleLike});
-      // (evt) => {evt.target.classList.toggle("elements__like_active");
-      // });
+      .addEventListener("click", (evt) => {this._toggleLike(evt)});
+      // (evt) => {evt.target.classList.toggle("elements__like_active");});
   }
 }
 
